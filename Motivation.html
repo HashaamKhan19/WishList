@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="mainModule.css">
+	<meta charset="utf-8">
+	<title>Motivation</title>
+	<style type="text/css">
+	div#quotes > *{
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<h1>QUOTES</h1>
+	<div class="category">
+		<button onclick="toggleQuote('pukhto');">PUSHTO</button>
+		<button onclick="toggleQuote('english');">ENGLISH</button>
+		<button onclick="toggleQuote('urdu');">URDU</button>
+		<br>
+	</div>
+
+	<div id="quotes"></div>
+
+	<br>
+	<h1 id="second">VIDEOS</h1>
+
+	<div id="videos">
+		<ul id="video-list">
+		</ul>
+	</div>
+
+
+	<script type="text/javascript">
+		var videos = [
+			{title: "Video Sample", path: "RickRoll.webm"}
+		]
+
+		var videoListContainer = document.getElementById("video-list");
+		for (var i = 0; i < videos.length; i++) {
+			var para = document.createElement("li");
+			para.setAttribute("class", "video-link-container");
+			para.innerHTML = `<a href="${videos[i].path}">${videos[i].title}</a>`;
+			videoListContainer.appendChild(para)
+		}
+
+	</script>
+
+	<script type="text/javascript">
+		var quotes = [
+		{text: "Har Sahar Darna Toba Kram, Har Bega Rata Yadege", category: "pukhto", author: "~ Ghani"},
+
+		{text: "Rasha Mama Zwi de lewanay de", category: "pukhto", author: "~ Hashaam"},
+		{text: "We are all full of sin. No pure human being exists. But no matter what we do, we never fall any lower than into God’s hands", category: "english", author: "Noah ~ Dark"},
+		{text: "The End is the Beginning and the Beginning is the End", category: "english", author: "Jonas ~ Dark"},
+		{text: "Tere Waday par jiye hum to ye jaan jhoot jana, K khushi se mar na jatay agar aitabar hota", category: "urdu", author: "~ Ghalib jani"},
+		{text: "Mere bachpan k din bhi kya Khoob thay Iqbal, be-nimazi bhi thay aur be-gunah bhi", category: "urdu", author: "~ Allama-Iqbal"},
+		];
+		
+		function toggleQuote(argument) {
+			var quotes = document.getElementById("quotes");
+			for (var i = quotes.children.length - 1; i >= 0; i--) {
+				if(quotes.children[i].getAttribute("class") != argument){
+					quotes.children[i].style.display = "none";
+				}
+				else{
+					quotes.children[i].style.display = "block";	
+				}
+			}	
+		}
+
+		var parent = document.getElementById('quotes');
+		for (var i = 0; i < quotes.length; i++) {
+			var para = document.createElement("div");
+			para.setAttribute("class", quotes[i].category);
+			para.innerHTML = `"<span class="quote">${quotes[i].text}</span>", <span class="author">${quotes[i].author}</span>`;
+			parent.appendChild(para)
+		}
+	</script>
+
+     <div id="wishlogo"></div>
+
+	<footer id="main-footer">
+		<p>Copyright &copy; 2021 WishList</p>
+	</footer>
+	
+</body>
+
+</html>

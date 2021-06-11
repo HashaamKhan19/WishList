@@ -1,0 +1,45 @@
+body {
+  background-image: url("Images/bg.jpg");
+  color: #555;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5em;
+  text-align: center;
+  margin: 10px;
+  padding-top: 30px;
+}
+
+#container{
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#button1{
+  background-color: salmon;
+  color: ghostwhite;
+  font-weight: bold;
+  width: 150px;
+  text-align: center;
+  border: 2px solid darkgoldenrod;
+  padding: 15px;
+  border-radius: 7px;
+  transition: 0.7s;
+}
+
+#button1:hover{
+  color: blue;
+  cursor: pointer;
+}
+
+#logo {
+  height: 250px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  background-image: url(Images/genie.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

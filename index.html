@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/login.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <div id="main-div">
+      <div id="logo"></div>
+      <p id="message">Sign in to continue</p>
+      <div>
+        <label for="email">Email</label>
+      </div>
+      <input id="email" type="text" placeholder="abc@gmail.com" />
+      <div>
+        <label for="password">Password</label>
+      </div>
+      <input id="password" type="password" placeholder="******" />
+      <button onclick="login()">Login</button>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
